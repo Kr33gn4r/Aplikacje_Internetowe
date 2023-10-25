@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+</head>
+<body style="background-color:#c0c0c0;">
+<div class="window" style="width: 400px">
+    <div class="title-bar">
+        <div class="title-bar-text">Start</div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body">
+        <form action="{{ url_for('start')}}" method="post">
+            <div class="field-row">
+                <input id="name" name="name" type="text"/>
+                <label for="name">Data Source</label>
+            </div>
+            <div class="field-row">
+                <input id="method" name="method" type="text"/>
+                <label for="method">HTTP/MQTT</label>
+            </div>
+            <div class="field-row">
+                <input id="address" name="address" type="text"/>
+                <label for="address">Destination Address</label>
+            </div>
+            <div class="field-row">
+                <input id="port" name="port" type="text"/>
+                <label for="port">Destination Port</label>
+            </div>
+            <div class="field-row">
+                <input id="path" name="path" type="text"/>
+                <label for="path">Destination Path</label>
+            </div>
+            <div class="field-row">
+                <input id="params" name="params" type="text"/>
+                <label for="params">Parameters (JSON)</label>
+            </div>
+            <input type="submit"/>
+        </form>
+    </div>
+    <hr>
+    <ul class="tree-view">
+        <li>
+            Params list
+            <ul>
+                <details>
+                    <summary>Source</summary>
+                    <ul>
+                        <li>"file": "string",</li>
+                        <li>"frequency": integer</li>
+                    </ul>
+                </details>
+            </ul>
+            <ul>
+                <details>
+                    <summary>Aggregation</summary>
+                    <ul>
+                        <li>"frequency": integer,</li>
+                        <li>"time": integer,</li>
+                        <li>"fields": {"new field name": "field to aggregate", ...}"</li>
+                    </ul>
+                </details>
+            </ul>
+            <ul>
+                <details>
+                    <summary>Filter</summary>
+                    <ul>
+                        <li>"frequency": integer,</li>
+                        <li>
+                            "field name":
+                            <ul>
+                                <li>[>, var] = value > var</li>
+                                <li>[<, var] = value < var</li>
+                                <li>[<>, var1, var2] = var1 < value < var2</li>
+                                <li>[><, var1, var2] = value < var1 or value > var2</li>
+                                <li>[var1, var2, ...] = value == var1 or value == var2 or ...</li>
+                                <li>0 / 1 = none / all values</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </details>
+            </ul>
+            <ul>
+                <details>
+                    <summary>Client</summary>
+                    <ul>
+                        <li>"keep": integer</li>
+                    </ul>
+                </details>
+            </ul>
+            <ul>
+                <details>
+                    <summary>Controllable Source</summary>
+                    <ul>
+                        <li>"frequency": integer,</li>
+                        <li>"power": integer</li>
+                        <li>
+                            "controller":
+                            <ul>
+                                <li>"method": "HTTP" or "MQTT"</li>
+                                <li>"address": string</li>
+                                <li>"port": integer</li>
+                                <li>"path": string</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </details>
+            </ul>
+            <ul>
+                <details>
+                    <summary>Controller</summary>
+                    <ul>
+                        <li>"temperature": integer</li>
+                    </ul>
+                </details>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

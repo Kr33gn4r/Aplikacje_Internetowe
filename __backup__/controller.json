@@ -1,0 +1,17 @@
+{
+    "source": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8100,
+        "path": ""
+    },
+    "dest": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8090,
+        "path": "",
+        "params": {
+            "temperature": 20
+        }
+    }
+}

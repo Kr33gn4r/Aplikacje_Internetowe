@@ -1,0 +1,18 @@
+{
+    "source": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8083,
+        "path": ""
+    },
+    "dest": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8010,
+        "path": "",
+        "params": {
+            "frequency": 5,
+            "file": "file3.txt"
+        }
+    }
+}

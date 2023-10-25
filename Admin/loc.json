@@ -1,0 +1,62 @@
+{
+    "source1": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8081,
+        "path": ""
+    },
+    "source2": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8082,
+        "path": ""
+    },
+    "source3": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8083,
+        "path": ""
+    },
+    "source4": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8084,
+        "path": ""
+    },
+    "source5": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8085,
+        "path": ""
+    },
+    "aggr": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8010,
+        "path": ""
+    },
+    "filter": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8020,
+        "path": ""
+    },
+    "client": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 2137,
+        "path": ""
+    },
+    "csource": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8090,
+        "path": ""
+    },
+    "controller": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8100,
+        "path": ""
+    }
+}

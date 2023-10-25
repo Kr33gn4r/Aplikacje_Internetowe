@@ -1,0 +1,22 @@
+{
+    "source": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8081,
+        "path": ""
+    },
+    "dest": {
+        "method": "HTTP",
+        "address": "127.0.0.1",
+        "port": 8020,
+        "path": "",
+        "params": {
+            "frequency": 5,
+            "time": 3600,
+            "fields": {
+                "avg1": "value1",
+                "avg2": "value2"
+            }
+        }
+    }
+}

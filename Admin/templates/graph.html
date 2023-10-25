@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Graph</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+</head>
+<body style="background-color:#c0c0c0;">
+<div class="window" style="width: 400px">
+    <div class="title-bar">
+        <div class="title-bar-text">Graph</div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body">
+        <form action="{{ url_for('graph')}}" method="post">
+            <div class="field-row">
+                <input id="name" name="name" type="text"/>
+                <label for="name">Graph Source</label>
+            </div>
+            <div class="field-row">
+                <input id="params" name="params" type="text"/>
+                <label for="params">Data Source and Value Name</label>
+            </div>
+            <div class="field-row">
+                <input id="type" name="type" type="text"/>
+                <label for="type">line / hist (Line graph or Histogram)</label>
+            </div>
+            <input type="submit"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>
